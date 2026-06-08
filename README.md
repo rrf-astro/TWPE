@@ -2,7 +2,7 @@
 
 **Paper:** *Time-Weighted Ordinal Complexity for Unevenly-Sampled Astrophysical Time Series*  
 **Authors:** [to be completed]  
-**Target journal:** Astronomy & Astrophysics  
+**Target journal:** TBD  
 **Status:** In preparation
 
 ---
