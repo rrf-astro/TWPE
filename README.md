@@ -72,6 +72,18 @@ Cell 18 (supplementary recomputation) must be run after Cell 14, since it reuses
 
 **Expected runtime:** about 4–6 minutes on a laptop (3 min 58 s measured with the light curves already cached; 6 min 11 s in a fresh clone, including the downloads). CELL 8 is the most expensive: MC n=50 × 46 σ levels × 5 series.
 
+### Figures
+
+The notebook numbers its figures by cell order, and the manuscript numbers them by order of appearance, so the two differ for the first two. Mapping:
+
+| Manuscript | File in `figs/` | Title of the notebook cell | Content |
+|---|---|---|---|
+| Fig. 1 | `fig02_limit_recovery_v1.0` | CELL 10 — Figure 2 | numerical check of the uniform-sampling limit (AR(1), m = 3–6) |
+| Fig. 2 | `fig01_bias_demo_v1.1` | CELL 9 — Figure 1 | bias between H_TWPE and H_p for the five synthetic processes |
+| Fig. 3 | `fig03_CH_plane_v1.0` | CELL 12 — Figure 3 | C×H plane and D_KL (synthetic series) |
+| Fig. 4 | `fig04_astro_application_v2.0` | CELL 15 — Figure 4 | OGLE-III long-period variables: C×H plane and D_KL |
+| Fig. 5 | `fig05_parameter_sensitivity_v2.0` | CELL 17 — Figure 5 | sensitivity to m and to the weight function |
+
 ---
 
 ## Data
