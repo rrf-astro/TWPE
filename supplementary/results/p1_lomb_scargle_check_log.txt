@@ -1,0 +1,16 @@
+== (1) Catalogue P1: reproduce Table 2 (median, IQR/1.35) ==
+Mira  n=50  catalogue P1 = 328 +- 123 d   (P1/185 = 1.77)
+SRV   n=50  catalogue P1 = 128 +- 65 d   (P1/185 = 0.69)
+
+== (2) Validation of the LS P1 against the catalogue P1 (Mira+SRV) ==
+Mira  n=50  |LS/cat-1|<5%: 45/50  ratio~0.5 or 2: 0  median LS/cat = 1.00  LS median 324 d  catalogue median 328 d
+SRV   n=50  |LS/cat-1|<5%: 36/50  ratio~0.5 or 2: 2  median LS/cat = 1.00  LS median 181 d  catalogue median 128 d
+
+== (3) LS P1 of all classes (same statistic as Table 2) ==
+Mira  n=50  LS P1 = 324 +- 145 d  (P1/185 = 1.75); range 130-1500 d; within 5% of 365 d or 182.6 d (alias-prone): 7
+SRV   n=50  LS P1 = 181 +- 191 d  (P1/185 = 0.98); range 39-1500 d; within 5% of 365 d or 182.6 d (alias-prone): 3
+OSARG n=50  LS P1 = 318 +- 283 d  (P1/185 = 1.72); range 13-1238 d; within 5% of 365 d or 182.6 d (alias-prone): 1
+OSARG LS P1 quantiles (10, 25, 50, 75, 90 %): [18.0, 40.0, 318.0, 423.0, 595.0]
+OSARG: 16/50 with P1 < 100 d; 31/50 with P1 >= 300 d
+
+numpy 1.26.4, scipy 1.13.1, python 3.12.2, P range 3.0-1500.0 d, oversampling 10

@@ -1,0 +1,49 @@
+check OK: pool 91689, 150 D_KL values reproduced (Mira>OSARG one-sided p = 2.25e-08)
+N = 150 (Mira 50, SRV 50, OSARG 50) with catalogue P1
+
+== (A) Class-level medians ==
+Mira   median P1 =  327.9 d (P1/185 = 1.77) | median D_KL real  239.2 | null B  137.0 | null C  118.2 | median A1 1.211 mag | median SNR 2.70
+SRV    median P1 =  128.3 d (P1/185 = 0.69) | median D_KL real  182.0 | null B  119.4 | null C  119.2 | median A1 0.132 mag | median SNR 0.88
+OSARG  median P1 =   30.0 d (P1/185 = 0.16) | median D_KL real  132.0 | null B  121.5 | null C  121.9 | median A1 0.011 mag | median SNR 0.45
+
+== (B) Pooled Spearman, 150 stars (uncorrected p) ==
+D_KL vs P1/185 (same ranks as vs P1)                               rho = +0.272  p = 0.000773
+D_KL vs |ln(P1/185)|                                               rho = -0.457  p = 4.02e-09
+D_KL vs P1/gap_star (median of gaps>60 d, per star)                rho = +0.243  p = 0.00279
+D_KL vs A1 (control)                                               rho = +0.463  p = 2.39e-09
+D_KL vs N_obs (control)                                            rho = -0.174  p = 0.0336
+D_KL vs SNR of the P1 sinusoid (control)                           rho = +0.502  p = 6.22e-11
+
+== (C) Within each class ==
+Mira: D_KL vs P1/185                                               rho = -0.368  p = 0.0086
+Mira: D_KL vs |ln(P1/185)|                                         rho = -0.398  p = 0.00417
+Mira: D_KL vs A1                                                   rho = -0.267  p = 0.0605
+Mira: D_KL vs SNR                                                  rho = +0.101  p = 0.487
+SRV: D_KL vs P1/185                                                rho = +0.074  p = 0.609
+SRV: D_KL vs |ln(P1/185)|                                          rho = -0.134  p = 0.353
+SRV: D_KL vs A1                                                    rho = +0.166  p = 0.25
+SRV: D_KL vs SNR                                                   rho = +0.230  p = 0.108
+OSARG: D_KL vs P1/185                                              rho = -0.115  p = 0.426
+OSARG: D_KL vs |ln(P1/185)|                                        rho = +0.061  p = 0.674
+OSARG: D_KL vs A1                                                  rho = -0.106  p = 0.464
+OSARG: D_KL vs SNR                                                 rho = -0.134  p = 0.355
+
+== (D) Partial Spearman of D_KL with P1 (t-test approximation, uncorrected p) ==
+| class (OSARG = reference)                 rho = -0.109  p = 0.189
+| class, A1, N_obs, SNR                     rho = -0.110  p = 0.187
+| A1, N_obs, SNR (no class)                 rho = -0.193  p = 0.0191
+|ln(P1/185)| | class, A1, N_obs, SNR         rho = -0.161  p = 0.0536
+Holm over the 5 pre-specified tests: pooled P: p 0.000773 -> 0.00309; pooled |ln|: p 4.02e-09 -> 2.01e-08; partial |class: p 0.189 -> 0.374; partial |class,A,N,SNR: p 0.187 -> 0.374; partial |ln| |class,A,N,SNR: p 0.0536 -> 0.161
+
+== (E) Nulls on the real timestamps (median of 30 realisations per star) ==
+null B periodic+random phase: per-star Spearman with real D_KL: all +0.47 | Mira +0.45 | SRV +0.53 | OSARG +0.58
+   one-sided MW (a>b) on the null: Mira>SRV p=0.00075; SRV>OSARG p=0.81; Mira>OSARG p=0.0096
+null C shuffled values: per-star Spearman with real D_KL: all +0.30 | Mira +0.27 | SRV +0.48 | OSARG +0.64
+   one-sided MW (a>b) on the null: Mira>SRV p=0.36; SRV>OSARG p=0.82; Mira>OSARG p=0.69
+   one-sided MW on the real D_KL (same subset): p=0.00029; p=1.1e-05; p=2.2e-08
+null B: D_KL vs P1/185 pooled rho = +0.156; null C: -0.012
+   Mira   real/null-B median ratio = 1.75
+   SRV    real/null-B median ratio = 1.52
+   OSARG  real/null-B median ratio = 1.09
+
+numpy 1.26.4, scipy 1.13.1, python 3.12.2, seed 42, m=4, N_REAL=30

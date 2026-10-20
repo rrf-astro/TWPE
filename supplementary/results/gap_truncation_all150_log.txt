@@ -1,0 +1,20 @@
+pool: 91689 stars  Mira 1635  SRV 11033  OSARG 79021
+check OK (150 stars; the two OSARG tail values reproduced)
+
+== Spearman, D_KL vs largest gap / N / number of gaps>60 d (permutation p, uncorrected) ==
+Mira   n= 50  max_gap: rho=-0.07 (p=0.639)  n: rho=-0.19 (p=0.179)  n_gaps: rho=-0.08 (p=0.614)
+SRV    n= 50  max_gap: rho=+0.20 (p=0.150)  n: rho=-0.26 (p=0.077)  n_gaps: rho=-0.11 (p=0.381)
+OSARG  n= 50  max_gap: rho=+0.15 (p=0.295)  n: rho=-0.31 (p=0.028)  n_gaps: rho=-0.14 (p=0.349)
+ALL    n=150  max_gap: rho=+0.03 (p=0.725)  n: rho=-0.17 (p=0.034)  n_gaps: rho=+0.01 (p=0.958)
+
+== Control: keep only the longer side of the largest gap ==
+(accepted if the kept piece has >= 120 points)
+Mira   n=50/50  median D_KL full  239.2 -> truncated  297.9; median change  +21.8; stars with decrease: 15/50; Spearman(full, truncated) = +0.83
+SRV    n=50/50  median D_KL full  182.0 -> truncated  192.1; median change  +15.6; stars with decrease: 17/50; Spearman(full, truncated) = +0.70
+OSARG  n=50/50  median D_KL full  132.0 -> truncated  149.6; median change  +13.5; stars with decrease: 13/50; Spearman(full, truncated) = +0.70
+        gap 1369 d: LPV-33726 D_KL 769.7 -> 426.5
+        gap 903 d: LPV-09900 D_KL 771.6 -> 247.9
+
+stars with largest gap > 500 d: [('33726', 'OSARG', 1369, 769.7), ('09900', 'OSARG', 903, 771.6)]
+
+numpy 1.26.4, python 3.12.2, seed 42, m=4, gap threshold 60.0 d

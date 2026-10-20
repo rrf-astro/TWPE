@@ -1,0 +1,14 @@
+{'Mira': 1663, 'SRV': 11132, 'OSARG': 79200} entries read from the catalogue files
+
+== Table 2 statistic, catalogue P1, 50 stars per class (seed 42) ==
+class   n_with_P1   median P1 [d]  IQR/1.35   mean   std    P1/185 (median)   median A1 [mag]
+Mira     50/50      327.9      123.2    331.9  127.8       1.77         1.211
+       P1 quantiles 10/25/75/90 %: [189.0, 232.0, 398.0, 516.0]; min 130.4, max 666.0
+SRV      50/50      128.3       65.1    158.4  115.1       0.69         0.132
+       P1 quantiles 10/25/75/90 %: [69.0, 96.0, 184.0, 275.0]; min 39.2, max 727.2
+OSARG    50/50       30.0       18.9    104.0  169.4       0.16         0.011
+       P1 quantiles 10/25/75/90 %: [15.0, 19.0, 44.0, 407.0]; min 8.9, max 758.5
+
+OSARG: 40/50 with P1 < 100 d; 9/50 with P1 >= 300 d
+
+numpy 1.26.4, python 3.12.2

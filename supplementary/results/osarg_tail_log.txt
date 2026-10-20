@@ -1,0 +1,24 @@
+pool: 91689 stars  Mira 1635  SRV 11033  OSARG 79021
+check OK: D_KL = 771.6, 769.7; mean over 50 = 159.9
+Spearman D_KL vs max_gap: rho = +0.152  (permutation p = 0.2888, 50 OSARGs)
+Spearman D_KL vs n: rho = -0.305  (permutation p = 0.0329, 50 OSARGs)
+Spearman D_KL vs n_gaps: rho = +0.026  (permutation p = 0.9164, 50 OSARGs)
+Spearman D_KL vs std: rho = -0.136  (permutation p = 0.3456, 50 OSARGs)
+median over 50 OSARGs: {'n': 502.0, 'max_gap': 175.3273, 'std': 0.0114}
+OGLE-LMC-LPV-09900: N=184 (rank from smallest 1), max gap=903 d (rank from largest 2), gaps>60d=6, std=0.0182 mag
+OGLE-LMC-LPV-33726: N=496 (rank from smallest 25), max gap=1369 d (rank from largest 1), gaps>60d=8, std=0.0197 mag
+
+== OGLE-LMC-LPV-09900: N=184, span=2715 d, D_KL(full) = 771.6
+   control, after gap the largest gap (903 d): N=176, max gap=174 d, D_KL = 247.9
+   reference: other 48 OSARGs, median D_KL = 131.4, max = 227.9
+   LS peaks (P<300 d): 26 d (power 0.1); 26 d (power 0.1); 38 d (power 0.1)
+   LS peaks (20-1500 d): 413 d (power 0.3, window 0.25); 26 d (power 0.1, window 0.00); 474 d (power 0.1, window 0.06)
+
+== OGLE-LMC-LPV-33726: N=496, span=4496 d, D_KL(full) = 769.7
+   control, before gap the largest gap (1369 d): N=398, max gap=361 d, D_KL = 426.5
+   control, after gap the largest gap (1369 d): N=98, max gap=339 d, D_KL = 820.7
+   reference: other 48 OSARGs, median D_KL = 131.4, max = 227.9
+   LS peaks (P<300 d): 40 d (power 0.2); 41 d (power 0.1); 39 d (power 0.1)
+   LS peaks (20-1500 d): 40 d (power 0.2, window 0.00); 503 d (power 0.2, window 0.01); 41 d (power 0.1, window 0.00)
+
+numpy 1.26.4, python 3.12.2, seed 42, m=4, gap threshold 60.0 d
